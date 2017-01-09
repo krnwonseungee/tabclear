@@ -1,0 +1,12 @@
+{
+  "name": "Tabclear",
+  "description": "Tab manager for avid tab multi-taskers.",
+  "version": "1.0",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "manifest_version": 2,
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  }
+}

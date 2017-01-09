@@ -1,0 +1,6 @@
+<p title="{{tab.url}}">
+  <img src="{{tab.favIconUrl}}" height="15" width="15">
+  {{ tab.title }}
+  <button ng-click="closeTab()" ng-if="!tab.active">click</button>
+  <span ng-if="tab.active">(current tab)</span>
+</p>

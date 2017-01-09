@@ -1,0 +1,21 @@
+<head>
+  <title>Manage your tabs</title>
+</head>
+
+<body>
+  <div ng-app="tabClear" ng-controller="tabsController">
+    <label>Search: <input ng-model="searchText"></label>
+    <button ng-click="removeFiltered(searchText)">Remove all</button>
+    <h4>You have {{tabs.length}} tabs open.</h4>
+    <tab tab="tab"></tab>
+    <div ng-repeat="tab in (filteredTabs = (tabs | filter:{ url: searchText }))">
+      <tab tab="tab"></tab>
+    </div>
+  </div>
+</body>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="src/vendor/angular.min.js"></script>
+<script src="src/vendor/lodash.min.js"></script>
+<script src="src/app.js"></script>
